@@ -16,5 +16,20 @@ describe('fizzbuzzTest',function(){
     expect(fizzBuzzResult).equals(true);
   })
 
-  
+  it('para un numero que no es divisible entre tres deberia devolver false',function(){
+    var fizzBuzzResult = fizzbuzz_module.esFizz(7);
+    expect(fizzBuzzResult).equals(false);
+  })
+
+  it('para un numero que es divisible entre cinco deberia devolver true',function(){
+    var fizzBuzzResult = fizzbuzz_module.esBuzz(25);
+    expect(fizzBuzzResult).equals(true);
+  })
+
+  it('para un numero que no es divisible entre cinco deberia devolver false',function(){
+    var fizzBuzzResult = fizzbuzz_module.esBuzz(23);
+    expect(fizzBuzzResult).equals(false);
+  })
+
+
 })
