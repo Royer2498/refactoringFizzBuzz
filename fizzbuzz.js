@@ -10,12 +10,7 @@ moduloFizzBuzz.fizzBuzz = function(limiteDeLaSecuencia) {
 
 moduloFizzBuzz.calcularTerminoDeLaSecuencia = function(numero){
   var terminoResultado = "";
-  if(moduloFizzBuzz.esFizz(numero)){
-    terminoResultado = terminoResultado + "Fizz";
-  }
-  if(moduloFizzBuzz.esBuzz(numero)){
-    terminoResultado = terminoResultado + "Buzz";
-  }
+  terminoResultado = terminoResultado + moduloFizzBuzz.esFizz(numero) + moduloFizzBuzz.esBuzz(numero);
   if(terminoResultado == ""){
     terminoResultado = numero.toString();
   }
@@ -24,21 +19,20 @@ moduloFizzBuzz.calcularTerminoDeLaSecuencia = function(numero){
 
 moduloFizzBuzz.esFizz = function(numero){
   if(numero%3 === 0){
-    return true;
+    return "Fizz";
   }else{
-    return false;
+    return "";
   }
 }
 
 moduloFizzBuzz.esBuzz = function(numero){
   if(numero%5 === 0){
-    return true;
+    return "Buzz";
   }else{
-    return false;
+    return "";
   }
 }
 
-console.log(moduloFizzBuzz.fizzBuzz(12));
 module.exports = moduloFizzBuzz;
 
 
