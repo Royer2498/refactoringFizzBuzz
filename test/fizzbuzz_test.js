@@ -36,5 +36,20 @@ describe('fizzbuzzTest',function(){
     expect(fizzBuzzResult).equals("FizzBuzz");
   })
 
+  it('para un numero que es divisible entre cinco deberia devolver Buzz',function(){
+    var fizzBuzzResult = fizzbuzz_module.calcularTerminoDeLaSecuencia(25);
+    expect(fizzBuzzResult).equals("Buzz");
+  })
+
+  it('para un numero que es divisible entre tres deberia devolver Fizz',function(){
+    var fizzBuzzResult = fizzbuzz_module.calcularTerminoDeLaSecuencia(6);
+    expect(fizzBuzzResult).equals("Fizz");
+  })
+
+  it('para un numero que no es divisible ni entre tres ni entre 5 deberia devolver el mismo numero',function(){
+    var fizzBuzzResult = fizzbuzz_module.calcularTerminoDeLaSecuencia(17);
+    expect(fizzBuzzResult).equals("17");
+  })
+
 
 })

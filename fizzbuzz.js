@@ -1,11 +1,11 @@
 let moduloFizzBuzz = {}
 
-moduloFizzBuzz.fizzBuzz = function(limite) {
-  var result = [];
-    for(i = 1; i <= limite; i++) {
-      result.push(moduloFizzBuzz.calcularTerminoDeLaSecuencia(i));
+moduloFizzBuzz.fizzBuzz = function(limiteDeLaSecuencia) {
+  var secuenciaResultado = [];
+    for(termino = 1; termino <= limiteDeLaSecuencia; termino++) {
+      secuenciaResultado.push(moduloFizzBuzz.calcularTerminoDeLaSecuencia(termino));
     }
-    return result;
+    return secuenciaResultado;
 }
 
 moduloFizzBuzz.calcularTerminoDeLaSecuencia = function(numero){
