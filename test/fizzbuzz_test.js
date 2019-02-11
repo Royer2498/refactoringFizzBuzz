@@ -6,7 +6,7 @@ const fizzbuzz_module = require('../fizzbuzz');
 describe('fizzbuzzTest',function(){
 
   it('para una secuencia hasta el 5 deberia devolver [1,2,Fizz,4,Buzz]',function(){
-    var fizzBuzzResult = fizzbuzz_module.fizzbuzz(5);
+    var fizzBuzzResult = fizzbuzz_module.fizzBuzz(5);
     var result = ["1","2","Fizz","4","Buzz"];
     expect(fizzBuzzResult).to.have.ordered.members(result);
   })
@@ -29,6 +29,11 @@ describe('fizzbuzzTest',function(){
   it('para un numero que no es divisible entre cinco deberia devolver false',function(){
     var fizzBuzzResult = fizzbuzz_module.esBuzz(23);
     expect(fizzBuzzResult).equals(false);
+  })
+
+  it('para un numero que es divisible entre 3 y 5 deberia devolver FizzBuzz',function(){
+    var fizzBuzzResult = fizzbuzz_module.calcularTerminoDeLaSecuencia(75);
+    expect(fizzBuzzResult).equals("FizzBuzz");
   })
 
 
