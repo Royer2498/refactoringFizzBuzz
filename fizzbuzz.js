@@ -3,12 +3,12 @@ fizzbuzz_module.fizzbuzz = function(limite) {
   var result = [];
     for(i = 1; i <= limite; i++) 
     {
-        if (i % 3 === 0 && i % 5 === 0)
+        if (fizzbuzz_module.esFizz(i) && i % 5 === 0)
         {
           result.push("FizzBuzz");                  
         }
         else 
-          if(i % 3 === 0)
+          if(fizzbuzz_module.esFizz(i))
           {
             result.push("Fizz");
           }
@@ -22,6 +22,14 @@ fizzbuzz_module.fizzbuzz = function(limite) {
     }
     return result;
 }
+fizzbuzz_module.esFizz = function(numero){
+  if(numero%3 === 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+
 console.log(fizzbuzz_module.fizzbuzz(12));
 module.exports = fizzbuzz_module;
 

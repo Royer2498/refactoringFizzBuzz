@@ -7,8 +7,14 @@ describe('fizzbuzzTest',function(){
 
   it('para una secuencia hasta el 5 deberia devolver [1,2,Fizz,4,Buzz]',function(){
     var fizzBuzzResult = fizzbuzz_module.fizzbuzz(5);
-    console.log(fizzBuzzResult);
-    result = ["1","2","Fizz","4","Buzz"];
+    var result = ["1","2","Fizz","4","Buzz"];
     expect(fizzBuzzResult).to.have.ordered.members(result);
   })
+
+  it('para un numero que es divisible entre tres deberia devolver true',function(){
+    var fizzBuzzResult = fizzbuzz_module.esFizz(6);
+    expect(fizzBuzzResult).equals(true);
+  })
+
+  
 })
